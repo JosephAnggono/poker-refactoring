@@ -53,4 +53,7 @@ class PokerHandEvaluatorTest {
         assertTrue(evaluator.isFullHouse(Hands.of("7C 7D 7H 9S 9C")));
         assertFalse(evaluator.isFullHouse(Hands.of("7C 7D 7H 9S KC")));
     }
+    @Test void fourStartingTwoThreeFourIsNotAceLowStraight() {
+        assertFalse(evaluator.isStraight(Hands.of("2C 3D 4H 6S 8C")));
+    }
 }
